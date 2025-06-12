@@ -1,16 +1,16 @@
 import unittest
 
-from extract_quest import extract_text, exctract_cache
+from extract_quest import extract_text, extract_cache
 from refill_quest import refill_text
 
 
 class TestExtractText(unittest.TestCase):
     def test_extract_text_updates_cache_and_returns_tag(self):
-        exctract_cache.clear()
+        extract_cache.clear()
         result = extract_text("Hello", "chapter.title.1")
         self.assertEqual(result, "{chapter.title.1}")
-        self.assertIn("chapter.title.1", exctract_cache)
-        self.assertEqual(exctract_cache["chapter.title.1"], "Hello")
+        self.assertIn("chapter.title.1", extract_cache)
+        self.assertEqual(extract_cache["chapter.title.1"], "Hello")
 
 
 class TestRefillText(unittest.TestCase):
