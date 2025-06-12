@@ -1,0 +1,12 @@
+# FTB quest file type
+*.snbt
+
+# IDE Setting
+.vscode/
+
+# FTB quest file folder
+out_chapters/
+chapters/
+
+# Python cache
+__pycache__/
