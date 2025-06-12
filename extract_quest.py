@@ -12,11 +12,11 @@ base = 'ftbquest\quests\chapters'
 out = 'out_chapters'
 debug = True
 
-exctract_cache = {}
+extract_cache = {}
 
 
 def extract_text(text: str, key: str):
-    exctract_cache[key] = text
+    extract_cache[key] = text
     text = '{' + key + '}'
 
     return text
@@ -90,7 +90,7 @@ def main():
         for res in result:
             print('[Done]', res)
     with open(os.path.join(out, "outdict.json"), 'w', encoding='utf-8') as f:
-            json.dump(exctract_cache, f, ensure_ascii=False, indent=4)
+            json.dump(extract_cache, f, ensure_ascii=False, indent=4)
     print('All Done.')
 
 
