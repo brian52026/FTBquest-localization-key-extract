@@ -7,3 +7,6 @@
 # FTB quest file folder
 out_chapters/
 chapters/
+
+# Python cache
+__pycache__/
