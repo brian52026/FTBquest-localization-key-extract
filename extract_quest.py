@@ -70,7 +70,7 @@ def work_file(file_path):
 
 
 def main():
-    if len(sys.argv) < 1:
+    if len(sys.argv) < 2:
         print(sys.argv[0] + " <path to exctra folder>")
         exit(1)
     global exctra_folder
